@@ -40,7 +40,7 @@ nav a:hover::after { right: 0; }
 .btn-light { color: var(--ink); background: #fff8ed; }
 .btn-outline { color: var(--brown); border: 1px solid currentColor; }
 
-.hero { position: relative; display: flex; min-height: 680px; align-items: center; padding: 100px clamp(24px, 8vw, 120px); border-bottom: 5px solid var(--gold); background: linear-gradient(90deg, rgba(23, 18, 15, .9), rgba(23, 18, 15, .73) 42%, rgba(23, 18, 15, .18)), url("hero-parrilla.png") center/cover; }
+.hero { position: relative; display: flex; min-height: 680px; align-items: center; padding: 100px clamp(24px, 8vw, 120px); border-bottom: 5px solid var(--gold); background: linear-gradient(90deg, rgba(23, 18, 15, .9), rgba(23, 18, 15, .73) 42%, rgba(23, 18, 15, .18)), url("hero-parrilla.webp") center/cover; }
 .hero-copy { max-width: 620px; }
 .eyebrow { display: block; color: var(--red); font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
 .hero .eyebrow { color: #efc777; }
@@ -119,7 +119,7 @@ footer { display: flex; align-items: center; gap: 15px; padding: 25px clamp(22px
   .brand { gap: 7px; font-size: 10px; }.brand img { width: 42px; height: 42px; }
   .socials { gap: 4px; }.socials a { width: 28px; height: 28px; min-width: 28px; }.socials img { width: 14px; height: 14px; max-width: 14px; max-height: 14px; }
   .site-header .nav-cta { width: 38px; height: 38px; padding: 0; font-size: 0; }.site-header .nav-cta img { width: 16px; height: 16px; }
-  .hero { min-height: 650px; padding: 86px 24px 100px; background: linear-gradient(180deg, rgba(23, 18, 15, .75), rgba(23, 18, 15, .83)), url("hero-parrilla.png") center/cover; }.hero h1 { font-size: 54px; }.hero p { font-size: 17px; }.hero::after { right: 24px; bottom: 24px; left: 24px; text-align: center; font-size: 11px; }
+  .hero { min-height: 650px; padding: 86px 24px 100px; background: linear-gradient(180deg, rgba(23, 18, 15, .75), rgba(23, 18, 15, .83)), url("hero-parrilla.webp") center/cover; }.hero h1 { font-size: 54px; }.hero p { font-size: 17px; }.hero::after { right: 24px; bottom: 24px; left: 24px; text-align: center; font-size: 11px; }
   .section, .split-section, .sandwich-feature { padding-top: 72px; padding-bottom: 72px; }.order-section form { padding: 24px 18px; }.form-grid { grid-template-columns: 1fr; }.form-note { display: block; margin: 12px 0 0; }.subscribe { display: block; }.subscribe .btn { width: 100%; margin-top: 8px; }
   .floating-wa { right: 14px; bottom: 14px; padding: 14px; border-radius: 50%; }.floating-wa span { display: none; }
   footer { align-items: flex-start; }
