@@ -16,15 +16,20 @@ document.querySelector('#order-form').addEventListener('submit', (event) => {
     'Hola, quiero hacer un pedido en Carnes El Convento.',
     '',
     `Box: ${data.get('box')}`,
-    `Despacho: ${data.get('delivery')}`,
+    `Modalidad: ${data.get('delivery')}`,
     `Nombre comprador: ${data.get('buyer')}`,
     `Nombre receptor: ${data.get('receiver')}`,
     `Dirección: ${data.get('address')}, ${data.get('commune')}`,
     `Teléfono: ${data.get('phone')}`,
     `Correo: ${data.get('email') || 'No indicado'}`,
-    `Fecha: ${data.get('date')}`,
-    `Horario aproximado: ${data.get('time')}`,
+    `Fecha preferida: ${data.get('date')}`,
+    `Ventana horaria preferida: ${data.get('time') || 'Sin preferencia'}`,
     `Observaciones: ${data.get('notes') || 'Sin observaciones'}`,
+    'Pago del despacho: mediante link de Mercado Pago después de confirmar la ruta',
+    'Pago del box: al momento de recibirlo',
+    'Habrá una persona disponible para recibir y pagar el box: Sí',
+    '',
+    'Quedo atento a la fecha disponible, ventana horaria y valor del despacho.',
   ].join('\n');
   window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
 });

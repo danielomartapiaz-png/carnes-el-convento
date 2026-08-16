@@ -48,7 +48,7 @@ nav a:hover::after { right: 0; }
 .hero h1 em { color: #efc777; font-style: italic; }
 .hero p { max-width: 500px; margin: 0 0 28px; color: #f2e5d3; font-size: 19px; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero::after { content: "Envasado al vacío  ·  Despacho en todo Santiago"; position: absolute; bottom: 30px; left: clamp(24px, 8vw, 120px); padding: 9px 14px; border: 1px solid rgba(255, 250, 242, .3); border-radius: 999px; color: #fffaf2; background: rgba(255, 250, 242, .12); font-size: 12px; font-weight: 700; }
+.hero::after { content: "Envasado al vacío  ·  Rutas programadas por sector"; position: absolute; bottom: 30px; left: clamp(24px, 8vw, 120px); padding: 9px 14px; border: 1px solid rgba(255, 250, 242, .3); border-radius: 999px; color: #fffaf2; background: rgba(255, 250, 242, .12); font-size: 12px; font-weight: 700; }
 
 .trust-strip { display: grid; grid-template-columns: minmax(210px, .75fr) 2.25fr; gap: 40px; padding: 42px clamp(22px, 7vw, 100px); color: #fff5e9; background: var(--brown); }
 .trust-heading h2 { margin: 8px 0 0; font: 500 clamp(27px, 3vw, 40px)/1.05 Georgia, "Times New Roman", serif; }
@@ -96,12 +96,18 @@ nav a:hover::after { right: 0; }
 .sandwich-feature img { height: 350px; object-fit: cover; }
 
 .delivery { background: #ede4d8; }
-.delivery-grid { display: grid; max-width: 1180px; grid-template-columns: 1fr 1fr; gap: 18px; margin: auto; }
+.delivery-grid { display: grid; max-width: 1180px; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: auto; }
 .delivery-grid > div { padding: 32px; border-radius: 3px; background: var(--paper); box-shadow: 0 10px 25px rgba(42, 29, 22, .08); }
 .delivery-icon { display: grid; width: 49px; height: 49px; place-items: center; border-radius: 14px; color: var(--brown); background: #f4dfbe; font: 800 15px Manrope; }
 .delivery-icon.express { color: var(--red); background: #f2c6bb; }
 .delivery h3 { margin: 16px 0 5px; font: 700 21px Manrope; }
 .delivery p { margin: 0; color: var(--muted); }
+.delivery-callout { display: flex; max-width: 1180px; align-items: center; gap: 18px; margin: 22px auto 0; padding: 20px 24px; border-left: 4px solid var(--gold); background: var(--brown); color: #fff; }
+.delivery-callout strong { min-width: 250px; font: 700 16px Manrope; }
+.delivery-callout span { color: #eadfd2; font-size: 14px; line-height: 1.55; }
+.payment-reservation { display: grid; max-width: 1180px; grid-template-columns: .75fr 1.25fr; gap: 42px; margin: 22px auto 0; padding: 30px 32px; border: 1px solid #d7b980; border-radius: 3px; background: #fff8ea; }
+.payment-reservation h3 { margin: 8px 0 0; font: 500 30px Georgia, "Times New Roman", serif; }
+.payment-reservation p + p { margin-top: 12px; }
 .delivery-conditions { display: grid; max-width: 1180px; grid-template-columns: .8fr 1.2fr; gap: 42px; margin: 22px auto 0; padding: 32px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255, 253, 249, .72); }
 .delivery-conditions h3 { margin: 8px 0; font: 500 28px Georgia, "Times New Roman", serif; }
 .delivery-conditions ul { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
@@ -113,6 +119,10 @@ nav a:hover::after { right: 0; }
 label { display: block; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 input, select, textarea { display: block; width: 100%; margin-top: 6px; padding: 13px 12px; border: 1px solid var(--line); border-radius: 3px; color: var(--ink); background: #fffdfa; font: 14px "DM Sans", sans-serif; }
 input:focus, select:focus, textarea:focus { outline: 3px solid rgba(169, 60, 43, .15); border-color: var(--red); }
+label small { display: block; margin-top: 6px; color: var(--muted); font-size: 11px; font-weight: 500; letter-spacing: 0; line-height: 1.4; text-transform: none; }
+.route-choice { display: block; min-height: 46px; margin-top: 6px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 3px; background: #f8eee2; letter-spacing: 0; text-transform: none; }
+.route-choice strong { display: block; color: var(--ink); font-size: 14px; }
+.route-choice small { margin-top: 3px; }
 textarea { resize: vertical; }.wide { margin-top: 15px; }.check { display: flex; align-items: center; gap: 8px; margin-top: 14px; letter-spacing: 0; text-transform: none; }.check input { width: auto; margin: 0; }.order-section .btn { margin-top: 20px; }.form-note { display: inline; margin-left: 12px; color: var(--muted); font-size: 12px; }
 .check a { color: var(--red); text-decoration: underline; text-underline-offset: 2px; }
 .coming { display: flex; justify-content: space-between; gap: 35px; background: #eadbc7; }.coming > div:first-child { max-width: 410px; }.coming-list { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 10px; }.coming-list span { color: var(--brown); border-color: rgba(42, 29, 22, .27); }
@@ -128,7 +138,8 @@ footer { display: flex; align-items: center; gap: 15px; padding: 25px clamp(22px
   .box-grid, .split-section, .sandwich-feature { grid-template-columns: 1fr; }
 
   .delivery-grid, .faq-grid { grid-template-columns: 1fr; }
-  .trust-strip, .delivery-conditions { grid-template-columns: 1fr; }
+  .trust-strip, .delivery-conditions, .payment-reservation { grid-template-columns: 1fr; }
+  .delivery-callout { display: block; }.delivery-callout span { display: block; margin-top: 7px; }
   .trust-items { grid-template-columns: 1fr 1fr; }
   .story img { height: 300px; }
   .coming, .social-section { display: block; }
