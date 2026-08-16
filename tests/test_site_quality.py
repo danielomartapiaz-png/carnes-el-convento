@@ -88,6 +88,17 @@ class SiteQualityTests(unittest.TestCase):
         self.assertIn('id="condiciones-despacho"', HTML)
         self.assertIn('Hasta las 18:00 del día anterior', HTML)
         self.assertIn('href="#condiciones-despacho"', HTML)
+
+    def test_delivery_conditions_use_grouped_visual_hierarchy(self):
+        self.assertIn('class="conditions-header"', HTML)
+        self.assertEqual(HTML.count('class="condition-highlight"'), 3)
+        self.assertEqual(HTML.count('class="policy-group"'), 4)
+        for heading in ('Tu ruta', 'Pago y reserva', 'Recepción del pedido', 'Cambios y contingencias'):
+            self.assertIn(f'<h4>{heading}</h4>', HTML)
+        self.assertIn('.conditions-summary', CSS)
+        self.assertIn('.policy-groups', CSS)
+        self.assertNotIn('.delivery-conditions li { padding:', CSS)
+
     def test_product_card_emphasis_follows_pointer_or_keyboard_focus(self):
         self.assertNotIn('.product-card.featured { outline:', CSS)
         self.assertIn('.product-card:hover, .product-card:focus-within', CSS)
