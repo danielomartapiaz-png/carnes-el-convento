@@ -31,8 +31,8 @@ class SiteQualityTests(unittest.TestCase):
         self.assertIn('decoding="async"', HTML)
 
     def test_product_cards_include_commercial_decision_details(self):
-        self.assertIn('$8.000 CLP/kg', HTML)
-        self.assertIn('$7.000 CLP/kg', HTML)
+        self.assertIn('$9.998 CLP/kg aprox.', HTML)
+        self.assertIn('$8.748 CLP/kg aprox.', HTML)
         self.assertIn('4 bifes de lomo vetado de 250 g', HTML)
         self.assertIn('1 kg de costillar de cerdo en tira', HTML)
         self.assertIn('1 kg de trutro de pollo', HTML)
@@ -45,10 +45,10 @@ class SiteQualityTests(unittest.TestCase):
         self.assertIn('1 kg de lomito de cerdo laminado (20 unidades)', HTML)
         self.assertIn('1 kg de hamburguesas artesanales (10 unidades)', HTML)
         self.assertIn('3 kg en total', HTML)
-        self.assertIn('$8.333 CLP/kg aprox.', HTML)
-        self.assertGreaterEqual(HTML.count('$32.000 CLP'), 2)
-        self.assertGreaterEqual(HTML.count('$28.000 CLP'), 2)
-        self.assertGreaterEqual(HTML.count('$25.000 CLP'), 2)
+        self.assertIn('$9.997 CLP/kg aprox.', HTML)
+        self.assertGreaterEqual(HTML.count('$39.990 CLP'), 2)
+        self.assertGreaterEqual(HTML.count('$34.990 CLP'), 2)
+        self.assertGreaterEqual(HTML.count('$29.990 CLP'), 2)
         self.assertGreaterEqual(HTML.count('class="product-facts"'), 3)
 
     def test_delivery_uses_owned_sectorized_routes_and_customer_coordination(self):
