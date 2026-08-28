@@ -1,4 +1,4 @@
-const whatsapp = '56939115958';
+const whatsapp = '56962489780';
 
 document.querySelectorAll('[data-box]').forEach((button) => button.addEventListener('click', () => {
   const value = button.dataset.box;

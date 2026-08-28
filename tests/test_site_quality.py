@@ -116,6 +116,14 @@ class SiteQualityTests(unittest.TestCase):
         for image in ('conventino-retrato.webp', 'conventino-familia.webp', 'logo-icon.webp'):
             self.assertTrue((ROOT / image).is_file(), f"Missing brand image: {image}")
 
+    def test_all_order_channels_use_the_dedicated_business_whatsapp_number(self):
+        self.assertEqual(HTML.count('https://wa.me/56962489780'), 2)
+        self.assertIn("const whatsapp = '56962489780';", JS)
+        self.assertIn('+56 9 6248 9780', HTML)
+        self.assertIn('<script src="app.js?v=2"></script>', HTML)
+        self.assertNotIn('56939115958', HTML + JS)
+        self.assertNotIn('3911 5958', HTML + JS)
+
 
 if __name__ == "__main__":
     unittest.main()
